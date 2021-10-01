@@ -1,0 +1,84 @@
+
+  <div class="modal-create__wrapper" id="add-post-form">
+  <h2 class='modal-create__heading'>Создать объявление</h2>
+ 
+  <label class='modal-create__field'>
+    Название товара
+    <input type='text' class='modal-create__input' id="product-title" minlength="3" required minlength='2' data-action="name-product"/>
+  </label>
+
+  <div class='modal-create__field'>
+    Фото
+    {{!-- <input type='file' class='modal-create__input  modal-create__file'/>
+    <label for="file">+</label> --}}
+    <div class='modal-create__file-wrap'>
+    <input type="file" name="file" id="first" class="inputfile" data-value="img-for-back" />
+    <label for="first" class="img-plus">      
+      <img src="" class="modal-create__preview-img" />
+    </label>
+    <input type="file" name="file" id="second" class="inputfile" data-value="img-for-back"/>
+    <label for="second" class="img-plus" >
+      <img src="" class="modal-create__preview-img" />
+    </label>
+    <input type="file" name="file" id="third" class="inputfile" data-value="img-for-back"/>
+    <label for="third" class="img-plus">
+      <img src="" class="modal-create__preview-img" />
+    </label>
+    <input type="file" name="file" id="fourt" class="inputfile" data-value="img-for-back"/>
+    <label for="fourt" class="img-plus">
+      <img src="" class="modal-create__preview-img" />
+    </label>
+    <input type="file" name="file" id="fifth" class="inputfile" data-value="img-for-back"/>
+    <label for="fifth" class="img-plus">
+      <img src="" class="modal-create__preview-img" />
+    </label>
+    {{!-- <input type="file" name="file" id="sixth" class="inputfile inputfile-sixth" />
+    <label for="sixth" class="img-plus img-plus-sixth">
+      <img src="" class="modal-create__preview-img" />
+    </label> --}}
+  </div>        
+  </div>
+  <label class='modal-create__field'>
+    Описание товара
+    <textarea
+      id='product-description'
+      name='user-description'
+      class='modal-create__input modal-create__description'
+      placeholder='Введите описание'
+      data-action="description-product"
+      minlength="10"
+    ></textarea>
+  </label>
+  <label class='modal-create__field'>
+    Категория товара
+    
+    <select id='product-category' class='modal-create__select'>
+      {{#each category}}
+      <option value="{{this}}">{{__ this}}</option>      
+      {{/each}}
+    </select>
+    
+  </label>
+  <label class='modal-create__field'>
+    Цена
+    <input id="product-price" type='number' min="0" class='modal-create__input'  placeholder='0.00 €'  data-action="price-product"/>
+  </label>
+  <label class='modal-create__field'>
+    Телефон
+    <input
+      id='product-phone'
+      type='tel'
+      name='user-tel'
+      class='modal-create__input'
+      pattern='[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}'
+      title='096-999-99-99'
+      placeholder='+38 (0--) --- -- --'
+      required
+    />
+  </label>
+  <button id="delete-post-button" data-action="delete-post-button" class="hidden">
+    <span class='material-icons-outlined delete-icon'>delete_forever</span>
+    Удалить объявление</button>
+  <button type='submit' class='modal-create__btn' data-action="add-post" id="addPostProduct">Добавить</button>
+ 
+</div>

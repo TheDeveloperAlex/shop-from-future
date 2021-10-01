@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--main-text);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+h1,
+h2,
+h3,
+p {
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: var(--accent-color);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--primary-white-color);
+}
+
+.hide {
+  display: none !important;
+}

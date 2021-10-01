@@ -1,0 +1,236 @@
+.Ads-slider-container {
+  margin-left: 0;
+  width: 320px;
+  height: 366px;
+}
+
+@media screen and (min-width: 768px) {
+  .Ads-slider-container {
+    margin-left: 0;
+    width: 768px;
+    height: 370px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .Ads-slider-container {
+    margin-left: 0;
+    width: calc(1280px / 3 * 2);
+    height: 485px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    flex-wrap: nowrap;
+  }
+}
+
+.hero {
+  display: flex;
+}
+.price-wrapper {
+  padding-left: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media screen and (min-width: 768px) {
+  .price-wrapper {
+    padding-right: 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.hero__slider.swiper-slide {
+  background-color: #1a2b44;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.hero__title {
+  font-family: var(--main-text);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: end;
+  color: #ffffff;
+}
+
+.hero__price {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--main-text);
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+
+  color: var(--accent-color);
+  &::before {
+    display: inline-block;
+    margin-top: 8px;
+    margin-right: 2px;
+    content: '€';
+    font-size: 10px;
+    line-height: 1.12;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-family: var(--main-text);
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.23;
+    text-align: end;
+    color: #ffffff;
+    margin-right: 40px;
+  }
+
+  .hero__price {
+    display: flex;
+    margin-right: 40px;
+    align-items: flex-start;
+    font-family: var(--main-text);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+
+    color: var(--accent-color);
+    &::before {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: 10px;
+      content: '€';
+      font-size: 14px;
+      line-height: 1.12;
+    }
+  }
+}
+
+.hero__advertising {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hero__advertising {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero__advertising {
+    display: block;
+  }
+}
+.hero__advertising_row {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .hero__advertising_row {
+    display: flex;
+  }
+}
+.ads-img {
+  height: 180px;
+}
+@media screen and (min-width: 768px) {
+  .ads-img {
+    height: 120px;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .ads-img {
+    height: 140px;
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .ads-box {
+    display: flex;
+    align-items: center;
+    width: calc(768px / 2);
+    height: 218px;
+    padding: 50px;
+    &:first-child {
+      background-color: #dddee2;
+    }
+    &:nth-child(2) {
+      background-color: #fafafa;
+      color: var(--accent-color);
+    }
+    &:nth-child(3) {
+      background-color: var(--accent-color);
+
+      color: #000000;
+      .price-wrapper__price {
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ads-box {
+    display: flex;
+    align-items: center;
+    width: calc(1280px / 3);
+    height: calc(485px / 2);
+    padding: 50px;
+    &:first-child {
+      background-color: #dddee2;
+    }
+    &:nth-child(2) {
+      background-color: #fafafa;
+
+      color: var(--accent-color);
+    }
+    &:nth-child(3) {
+      background-color: var(--accent-color);
+
+      color: #000000;
+      .price-wrapper__price {
+        color: white;
+      }
+    }
+  }
+}
+
+.price-box {
+  text-align: start;
+}
+.price-wrapper__title {
+  font-size: 18px;
+  line-height: 1.22;
+
+  color: #000000;
+}
+
+@media screen and (min-width: 768px) {
+  .price-wrapper__price {
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--main-text);
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 1.21;
+
+    &::before {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: 10px;
+      content: '€';
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+}
+#ads {
+  padding: 0px;
+}

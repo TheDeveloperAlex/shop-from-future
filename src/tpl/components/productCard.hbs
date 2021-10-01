@@ -1,0 +1,29 @@
+<div class='category__wrapper'>
+  {{#each this}}
+
+  <div class='category__card-wrapper'>
+    <div class="overlay">
+      <button type="button"
+        data-action="{{#if (isSelectedFavourites _id)}}remove-from-favourites{{else}}add-to-favourites{{/if}}"
+        class="favorite" data-id="{{_id}}">
+        <span
+          class="card-goods-icon material-icons-outlined {{#if (isSelectedFavourites _id)}}card-goods-icon-active{{/if}}">favorite{{#unless
+          (isSelectedFavourites _id)}}_border{{/unless}}</span>
+      </button>
+      <button type="button" data-action="open-card" class="link-card" data-id="{{_id}}" data-category="{{category}}">
+        <span class="card-goods-icon material-icons-outlined">crop_free</span>
+      </button>
+    </div>
+    <div class="category__card">
+
+      <a href='/' class='' data-id='{{_id}}' data-category='{{category}}'>
+        <div class='category__image-wrapper'>
+          <img class='category__card-image' src='{{imageUrls.[0]}}' alt='{{title}}' />
+        </div>
+        <h3 class='category__card-title'>{{title}}</h3>
+        <p class='category__card-price'>{{price}}€</p>
+      </a>
+    </div>
+  </div>
+  {{/each}}
+</div>

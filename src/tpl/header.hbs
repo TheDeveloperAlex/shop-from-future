@@ -1,0 +1,162 @@
+<div class='container'>
+  {{!-- MOBILE_HEADER --}}
+  <div class='header__mobile'>
+    <button type='button' class='mobile-button' data-action='open-filter'>
+      <span class="material-icons-round icons">menu</span>
+      <use href=''></use>
+      </svg>
+    </button>
+    <a href='/' data-action='open-main'>
+      <img class='mobile__logo' src='{{this.logo}}' alt='logo' />
+    </a>
+    <button type='button' class='mobile-button' data-action="open-input">
+      <span class="material-icons-round icons">search</span>
+    </button>
+    <form class='header__form_mobile'>
+      <input class='header__find_mobile' data-searchmob='/call/find?search=' type='text' />
+      <button class="search__btn " data-search='searchmob'>
+        <span class="material-icons icons">search</span>
+      </button>
+    </form>
+  </div>
+  <div class='header__wrapper'>
+    <nav class='nav'>
+      <a href='/' data-action='open-main'>
+
+        <img class='header__logo logo' src='{{this.logo}}' alt='logo' />
+      </a>
+      <form class='header__form_desktop'>
+        <input class='header__find' data-search='/call/find?search=' type='text' />
+        <button class="search__btn" data-search='search'>
+          <span class="material-icons icons">search</span>
+        </button>
+      </form>
+    </nav>
+    <div class='box'>
+      <ul class='list registration log-in' id="register-wraper">
+        <li class='item registration__item'>
+          <button class='registration__btn-reg' type='button' data-action="open-modal"
+            data-value="auth">Регистрация</button>
+        </li>
+        <li class='item registration__item'>
+          <button class='registration__btn-in' type='button' data-action="open-modal" data-value="auth">Войти</button>
+        </li>
+      </ul>
+      <ul class='list cabinet ' id="cabinet-wraper">
+        <li class='item cabinet__item my-cabinet'>
+          <a class='cabinet__in' type='button' data-action='open-cabinet'>
+            <span class="material-icons-outlined icons">account_circle</span>Мой кабинет</a>
+          <div class="modal-cabinet hidden">
+            <ul class="menu-caminet">
+              <li class="item"><a class="link" href="http://">Мои объявления</a></li>
+              <li class="item"><a class="link" href="http://">Избранные</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class='item cabinet__item'>
+          <button class='cabinet__out' type='button' data-action="open-modal" data-value="modalExit">
+            <span class="material-icons-round icons">logout</span>
+          </button>
+        </li>
+      </ul>
+
+      <button class='header__btn' type='button' data-action="open-modal" data-value="createEditProduct">Создать
+        объявление</button>
+
+    </div>
+  </div>
+  <div class='filter'>
+    <ul class='list filter__list_desktop'>
+      {{#each this.data}}
+      <li class='item filter__item_desktop'>
+        <a href='/call/specific/{{this}}' class='filter__btn'>{{__ this}}</a>
+      </li>
+      {{/each}}
+    </ul>
+
+    <form class='header__form_tablet'>
+      <input class='header__find header__find_tablet' data-searchtab='/call/find?search=' type='text' />
+      <button type='submit' data-search='searchtab' class='search__btn'>
+        <span class="material-icons icons">search</span>
+      </button>
+    </form>
+    <button class='filter__btn_open' type='button' data-action='open-filter'>
+      <span class="material-icons icons">tune</span>
+      Фильтры
+    </button>
+
+    {{!-- <a href="/" class='reset-btn' type='reset'> --}}
+      <button class='reset-btn' type='reset' data-action='close-filter'>
+        <span class="material-icons icons">replay</span>
+        Очистить
+        {{!-- </a> --}}
+    </button>
+  </div>
+</div>
+{{!-- TABLET MENU --}}
+<div class="tablet-menu__wrapper">
+  <div class='tablet-menu'>
+    <div class='container'>
+      <div class='filter_tablet'>
+        <ul class='list filter__list_tablet'>
+          {{#each this.data}}
+          <li class='item filter__item_tablet'>
+            <a href='/call/specific/{{this}}' class='filter__btn'>{{__ this}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOBILE-MENU -->
+<div class='mobile-container'>
+  <div class='mobile-menu'>
+    <button class='btn-close' data-action="btn-close" type='button'>
+      <span class="material-icons-round icons">close</span>
+    </button>
+    <ul class='list log-in mobile-menu__registration' id="register-wraper-mobile">
+      <li class='item registration__item'>
+        <button class='registration__btn-reg' type='button' data-action="open-modal"
+          data-value="auth">Регистрация</button>
+      </li>
+      <li class='item registration__item'>
+        <button class='registration__btn-in' type='button' data-action="open-modal" data-value="auth">Войти</button>
+      </li>
+    </ul>
+    <ul class='list cabinet mobile-menu__cabinet ' id="cabinet-wraper-mobile">
+      <li class='item cabinet__item menu-cabinet'>
+        <a class='cabinet__in' type='button' data-action='open-cabinet-mobile'>
+          <span class="material-icons-outlined icons">account_circle</span>Мой кабинет</a>
+        <div class="modal-cabinet-mobile hidden">
+          <ul class="menu-caminet">
+            <li class="item"><a class="link" href="http://">Мои объявления</a></li>
+            <li class="item"><a class="link" href="http://">Избранные</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class='item cabinet__item'>
+        <button class='cabinet__out' type='button' data-action="log-out">
+          <span class="material-icons-round icons">logout</span>
+        </button>
+      </li>
+    </ul>
+    <div class='mobile__wrapper'>
+      <button data-action="btn-close" class='filter__btn_mobile' type='button'>
+        <span class="material-icons-round icons">tune</span>
+        Фильтры
+      </button>
+      <button class='reset-btn_mobile' data-action='close-filter' type='reset'>
+        <span class="material-icons-round icons">replay</span>
+        Очистить
+      </button>
+    </div>
+    <ul class='list filter__list_mobile'>
+      {{#each this.data}}
+      <li class='item filter__item_mobile'>
+        <a href='/call/specific/{{this}}' class='filter__btn'>{{__ this}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

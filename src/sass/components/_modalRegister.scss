@@ -1,0 +1,194 @@
+.center {
+  text-align: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .center {
+    text-align: start;
+  }
+}
+
+.modal_register-div {
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal_register-div {
+    width: calc(100% - 30px);
+    height: 85vh;
+  }
+}
+
+@media screen and (min-width: 321px) {
+  .modal_register-div {
+    width: 290px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal_register-div {
+    width: 530px;
+  }
+}
+
+.modal_paragraph-register-google {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_paragraph-register-google {
+    font-size: 14px;
+    line-height: 1.21;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+.modal_button-register-google {
+  text-align: center;
+  display: flex;
+  margin-bottom: 30px;
+  padding-top: 16px;
+  padding-left: 32px;
+  width: 150px;
+  height: 50px;
+  background: rgba(250, 250, 250, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal_button-register-google {
+    margin-bottom: 50px;
+  }
+}
+
+.modal_button-svg-google {
+  width: 85px;
+  height: 18px;
+}
+
+.modal_paragraph-register-email {
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_paragraph-register-email {
+    font-size: 14px;
+    line-height: 1.21;
+    margin-bottom: 30px;
+  }
+}
+
+.modal_input-email-register {
+  margin-bottom: 26px;
+  padding-left: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_input-email-register {
+    margin-bottom: 24px;
+  }
+}
+
+.modal_input-password-register {
+  margin-bottom: 30px;
+  padding-left: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_input-password-register {
+    margin-bottom: 40px;
+  }
+}
+
+.modal_input-register::placeholder {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #bbbbbb;
+}
+.modal_input-register {
+  border: 1px solid #bbbbbb;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_input-register::placeholder {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .modal_input-register {
+    width: calc(100% - 38px);
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 321px) {
+  .modal_input-register {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal_input-register {
+    padding-left: 17px;
+    height: 56px;
+  }
+}
+
+.modal_div-button-register {
+  display: flex;
+  justify-content: space-between;
+}
+.modal_button-register {
+  padding: 0;
+  width: 116px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.25;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_button-register {
+    width: 203.54px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.modal_button-register-entrance {
+  background: var(--accent-color);
+  color: var(--primary-white-color);
+}
+
+.modal_button-registeration {
+  border: 1px solid #bbbbbb;
+  background: rgba(255, 255, 255, 1);
+  color: var(--primary-black-color);
+}
+
+.modal_button-registeration:hover {
+  background: var(--accent-color);
+  color: var(--primary-white-color);
+}

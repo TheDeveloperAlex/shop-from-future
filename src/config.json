@@ -1,0 +1,128 @@
+{
+  "apiUrl": "https://callboard-backend.goit.global",
+  "baseTpl": {
+    "header": {
+      "getCategories": "/call/categories",
+      "tpl": "/header.hbs"
+    },
+    "footer": {
+      "tpl": "/footer.hbs"
+    }
+  },
+  "componentsTpl": {
+    "ads": {
+      "getAds": "/call/ads",
+      "tpl": "/components/ads.hbs"
+    },
+    "goods": {
+      "getGoods": "/call?page=",
+      "tpl": "/components/goods.hbs"
+    }
+  },
+  "modalTpl": {},
+  "auth": {
+    "register": {
+      "link": "/auth/register",
+      "name": "Регистрация",
+      "tpl": "register"
+    },
+    "login": {
+      "link": "/auth/login",
+      "name": "Войти",
+      "tpl": "login"
+    },
+    "logout": {
+      "link": "/auth/logout",
+      "name": "Выйти из учетной записи ",
+      "tpl": "episode"
+    }
+  },
+  "register": [
+    {
+      "link": "/auth/register",
+      "name": "Регистрация",
+      "tpl": "register"
+    },
+    {
+      "link": "/auth/login",
+      "name": "Войти",
+      "tpl": "login"
+    },
+    {
+      "link": "/auth/logout",
+      "name": "Выйти из учетной записи ",
+      "tpl": "episode"
+    },
+    {
+      "link": "/auth/google",
+      "name": "Google",
+      "tpl": "google"
+    }
+  ],
+  "user": [
+    {
+      "link": "/user",
+      "name": "Мой кабинет",
+      "tpl": "userDescription"
+    },
+    {
+      "link": "​/user​/{userId}",
+      "name": "Войти",
+      "tpl": "login"
+    },
+    {
+      "link": "/call",
+      "name": "Создать объявление",
+      "tpl": "createCall"
+    },
+    {
+      "link": "/call/{callId}",
+      "name": "Редактировать объявление",
+      "tpl": "editCall"
+    },
+    {
+      "link": "/call/{callId}",
+      "name": "Удалить объявление",
+      "tpl": "deleteCall"
+    },
+    {
+      "link": "/call/favourite/{callId}",
+      "name": "Добавить в избранное",
+      "tpl": "addFavorite"
+    },
+    {
+      "link": "/call/favourite/{callId}",
+      "name": "Удалить из избранного",
+      "tpl": "deleteFavorite"
+    },
+    {
+      "link": "/call/favourite",
+      "name": "Избранное",
+      "tpl": "getFavorite"
+    }
+  ],
+  "mainPag": {
+    "ads": {
+      "link": "/call/ads",
+      "name": "Рекламный блок",
+      "tpl": "ads"
+    },
+    "allCall": {
+      "link": "​/call",
+      "name": "Все товары",
+      "tpl": "allCall"
+    },
+    "specific_category": {
+      "link": "/call/specific/{category}",
+      "name": "Список категорий",
+      "tpl": "category"
+    },
+    "category_list": {
+      "link": "/call/categories",
+      "name": "Список категорий",
+      "tpl": "category"
+    }
+  },
+  "favourites_URL": "/call/favourite"
+}
+

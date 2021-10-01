@@ -1,0 +1,43 @@
+<button class='add-good' type='button' data-action="open-modal" data-value="createEditProduct">
+  <span class="material-icons plus">add</span>
+</button>
+{{#each this}}
+<div class='swiper-container container-categories'>
+  <h2 class="swiper-title">{{__ name}}</h2>
+  <a class="swiper-link__once-category" href='/call/specific/{{name}}'>Смотреть все</a>
+  {{#if text}}
+  <p>{{__ text}}</p>
+  {{/if}}
+  <div class='swiper-wrapper'>
+    {{#each data}}
+    <div class='swiper-slide'>
+      <div class="overlay">
+        <button type="button"
+          data-action="{{#if (isSelectedFavourites _id)}}remove-from-favourites{{else}}add-to-favourites{{/if}}"
+          class="favorite " data-id="{{_id}}">
+          <span
+            class="card-goods-icon material-icons-outlined {{#if (isSelectedFavourites _id)}}card-goods-icon-active{{/if}}">favorite{{#unless
+            (isSelectedFavourites _id)}}_border{{/unless}}</span>
+        </button>
+        <button type=" button" data-action="open-card" class="link-card" data-id="{{_id}}" data-category="{{category}}">
+          <span class="card-goods-icon material-icons-outlined">crop_free</span>
+        </button>
+      </div>
+      <a href="/" class="swiper-container__link-card" data-action="open-card" data-id="{{_id}}" data-userId="{{userId}}"
+        data-category="{{category}}">
+        <div class='card-image__wrapper'><img class="card-image__img" src="{{imageUrls.[0]}}" alt="{{__ title}}">
+        </div>
+        <h3 class='card-name'>{{__ title}}</h3>
+        <p class='card-price'>
+          <span class="old-price"> {{oldPrice}} </span>
+          <span class="price"> {{price}}&#8364</span>
+        </p>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div id="btn-slider" class='swiper-button-prev'></div>
+  <div id="btn-slider" class='swiper-button-next'></div>
+</div>
+{{/each}}

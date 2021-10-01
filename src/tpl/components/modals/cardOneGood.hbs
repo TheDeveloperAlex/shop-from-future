@@ -1,0 +1,57 @@
+<div class="card-goods" id="card-goods">
+    <div class="card-goods__left">
+        <div class="card-goods__firstwrapper">
+            <img src="{{imageUrls.[0]}}" alt="{{title}}" class="card-goods__img" id="mainImg">
+        </div>
+        <div class="card-goods__container">
+            {{#each imageUrls}}
+            <div class="card-goods__wrapper">
+                <a class="card-goods__img-link" data-action="show-main-img">
+                    <img src="{{this}}" alt="{{title}}" class="card-goods__imgsecond">
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{!-- //////slider --}}
+    <div class='swiper-container'>
+        <div class='swiper-wrapper card-goods__swiper'>
+            {{#each imageUrls}}
+            <div class='swiper-slide'>
+                <div class='card-image__wrapper'>
+                    <img class="card-image__img" src="{{this}}" alt="{{title}}">
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    {{!-- ////slider --}}
+
+    <div class="card-goods__right">
+
+        <h2 class="card-goods__title">{{title}}</h2>
+        <p class="card-goods__code">Категори товара: {{category}}</p>
+        <p class="card-goods__price">{{price}}€</p>
+
+
+        <button type="button" data-action="show-user-data" class="card-goods__btn-information"
+            data-userId="{{userId}}">Информация о продавце</button>
+        <div class="user-data">
+
+        </div>
+        <button type="button" data-action="add-to-favourites" data-id="{{_id}}"
+            class="card-goods__btn card-goods__btn-favorites">В избранное
+
+            <span class="card-goods-icon material-icons-outlined">favorite_border</span>
+        </button>
+        <button type="button" class="card-goods__btn card-goods__btn-share">Поделиться
+            <span class="card-goods-icon material-icons-outlined">share</span>
+        </button>
+
+        <h3 class="card-goods__heading-desc">Описание</h3>
+        <p class="card-goods__desc">{{description}}</p>
+
+    </div>
+
+</div>

@@ -1,0 +1,28 @@
+// base styles
+@import './base/common';
+@import './base/container';
+// utils
+@import './utils/variables';
+
+// Стили для файла с примером HTML-фрагмента
+
+// common components
+@import './components/category';
+@import './components/backdrop';
+@import './components/mainModal';
+@import './components/modalRegister';
+@import './components/modal-create';
+@import './components/swiper';
+@import './components/modalCardOneGood';
+@import './components/modalMyOffice';
+@import './components/animation-modal';
+@import './components/modalExit';
+@import './components/validator';
+@import './components/goitStudentModal';
+
+/*====layout====*/
+@import './layout/header.scss';
+@import './layout/mobile-menu.scss';
+@import './layout/tablet-filter.scss';
+@import './layout/footer.scss';
+@import './layout/ads.scss';

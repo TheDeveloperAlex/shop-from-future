@@ -1,0 +1,92 @@
+.footer {
+  background: var(--background-color-dark);
+  padding-top: 38px;
+  padding-bottom: 38px;
+
+  margin-bottom: 0px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .footer-wrapper {
+    .footer-text {
+      color: var(--text-footers-color);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 12px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      justify-content: center;
+    }
+
+    .footer-span {
+      border-right: 1px solid var(--text-footers-color);
+      border-left: 1px solid var(--text-footers-color);
+      padding-left: 6px;
+      padding-right: 6px;
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    .material-icons-outlined {
+      color: var(--accent-color);
+      margin-left: 6px;
+      margin-right: 6px;
+    }
+
+    .material-icons-round {
+      margin-right: 6px;
+    }
+
+    .footer-btn {
+      color: var(--text-footers-color);
+      font-family: var(--main-text);
+      font-size: 12px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      border: none;
+      outline: none;
+      font-weight: normal;
+      text-decoration: underline;
+      background-color: rgba(255, 255, 255, 0);
+
+      &:hover,
+      &:focus {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+.link-download__wrapper {
+
+  background-color: #02172a;
+  text-align: center;
+
+  .link-download {
+    padding-bottom: 41px;
+    padding-top: 41px;
+    display: block;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--primary-white-color);
+    cursor: pointer;
+  }
+}
+
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}

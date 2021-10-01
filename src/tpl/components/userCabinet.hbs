@@ -1,0 +1,80 @@
+<div class="empty-goods hidden">
+  <h2 class='swiper-title'>Мои объявления</h2>
+  <p class="empty">У Вас отстутствуют личные объявления</p>
+</div>
+<div class='swiper-container container-categories calls' id="calls">
+  <h2 class='swiper-title'>Мои объявления</h2>
+  <a href='/cabinet/calls' class='swiper-link__once-category'>Смотреть все</a>
+  <div class='swiper-wrapper'>
+    {{#each userData.calls}}
+    <div class='swiper-slide'>
+      <div class='overlay'>
+        <button type='button' data-action='add-to-favourites' class='favorite' data-id='{{_id}}'>
+          <span class='card-goods-icon material-icons-outlined'>favorite_border</span>
+        </button>
+        <button type='button' data-action='open-modal-edit' data-value='createEditProduct' class='link-card'
+          data-id='{{_id}}' data-category='{{category}}'>
+          <span class='card-goods-icon material-icons-outlined'>crop_free</span>
+        </button>
+      </div>
+      <div class='category__card'>
+        <a href='/' class='swiper-container__link-card' data-action='open-modal-edit' data-value='createEditProduct'
+          data-id='{{_id}}' data-category='{{category}}'>
+          <div class='card-image__wrapper'><img class='card-image__img' src='{{imageUrls.[0]}}' alt='{{title}}' />
+          </div>
+          <h3 class='card-name'>{{title}}</h3>
+          <p class='card-price'>
+            <span class='old-price'> {{oldPrice}} </span>
+            <span class='price'> {{price}}&#8364</span>
+          </p>
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{#if (isEnoughSlides userData.calls.length)}}
+  <div id="btn-slider" class='swiper-button-prev'></div>
+  <div id="btn-slider" class='swiper-button-next'></div>
+  {{/if}}
+</div>
+<div class='empty-favourite hidden'>
+  <h2 class='swiper-title'>Избранное</h2>
+  <p class="empty">У Вас отстутствуют избранные объявления</p>
+</div>
+<div class='swiper-container container-categories favourite' id="favourite">
+  <h2 class='swiper-title'>Избранное</h2>
+  <a href='/cabinet/favourites' class='swiper-link__once-category'>Смотреть все</a>
+  <div class='swiper-wrapper'>
+    {{#each userData.favourites}}
+    <div class='swiper-slide'>
+      <div class='overlay'>
+        <button type="button"
+          data-action="{{#if (isSelectedFavourites _id)}}remove-from-favourites{{else}}add-to-favourites{{/if}}"
+          class="favorite" data-id="{{_id}}">
+          <span
+            class="card-goods-icon material-icons-outlined {{#if (isSelectedFavourites _id)}}card-goods-icon-active{{/if}}">favorite{{#unless
+            (isSelectedFavourites _id)}}_border{{/unless}}</span>
+        </button>
+        <button type='button' data-action='open-card' class='link-card' data-id='{{_id}}' data-category='{{category}}'>
+          <span class='card-goods-icon material-icons-outlined'>crop_free</span>
+        </button>
+      </div>
+      <div class='category__card'>
+        <a href='/' class='swiper-container__link-card' data-id='{{_id}}' data-category='{{category}}'>
+          <div class='card-image__wrapper'><img class='card-image__img' src='{{imageUrls.[0]}}' alt='{{title}}' />
+          </div>
+          <h3 class='card-name'>{{title}}</h3>
+          <p class='card-price'>
+            <span class='old-price'> {{oldPrice}} </span>
+            <span class='price'> {{price}}&#8364</span>
+          </p>
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{#if (isEnoughSlides userData.favourites.length)}}
+  <div id="btn-slider" class='swiper-button-prev'></div>
+  <div id="btn-slider" class='swiper-button-next'></div>
+  {{/if}}
+</div>
